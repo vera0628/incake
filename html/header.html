@@ -1,56 +1,177 @@
 <div id="header">
-        <!-- 导航 -->
-        <div class="nav">
-            <!-- 左 -->
-            <div class="leftsidebar">
-                <img src="../image/logo-1.png">
+    <!-- 导航 -->
+    <div class="nav">
+        <!-- 左 -->
+        <div class="leftsidebar">
+            <img src="../image/logo-1.png">
+        </div>
+        <!-- 中 -->
+        <div class="mainbav">
+            <ul>
+                <li class="index"><a href="../html/index.html">首页</a></li>
+                <li class="drop-down cake">
+                    <a href="../html/cakeserise.html">蛋糕馆</a>
+                    <ol>
+                        <li><a href="cakeserise.html">芝士系列</a></li>
+                        <li><a href="cakeserise.html">巧克力系列</a></li>
+                        <li><a href="cakeserise.html">拿破仑系列</a></li>
+                        <li><a href="cakeserise.html">莫斯系列</a></li>
+                        <li><a href="cakeserise.html">拿破仑系列</a></li>
+                        <li><a href="cakeserise.html">拿破仑系列</a></li>
+                    </ol>
+                </li>
+                <li class="shopping"><a href="javaScript:">特惠商城</a></li>
+                <li class="drop-down teatime"><a href="javaScript:">INLIVE</a>
+                    <ol>
+                        <li>下午茶</li>
+                    </ol>
+                </li>
+                <li class="drop-down company">
+                    <a href="javaScript:">企业专区</a>
+                    <ol>
+                        <li>企业vip登录</li>
+                    </ol>
+                </li>
+                <li class="card"><a href="javaScript:">卡卷兑换
+                    </a></li>
+            </ul>
+        </div>
+        <!-- 右 -->
+        <div class="rightsidebar">
+            <div class="minu_top">
+                <a href="../html/login.html">登录</a>
+                <a href="">丨</a>
+                <a href="../html/register.html">注册</a>
             </div>
-            <!-- 中 -->
-            <div class="mainbav">
-                <ul>
-                    <li class="index"><a href="javaScript:">首页</a></li>
-                    <li class="drop-down cake">
-                        <a href="javaScript:">蛋糕馆</a>
-                        <ol>
-
-                            <li>芝士系列</li>
-                            <li>巧克力系列</li>
-                            <li>拿破仑系列</li>
-                            <li>莫斯系列</li>
-                            <li>莫斯系列</li>
-                            <li>莫斯系列</li>
-                        </ol>
-                    </li>
-                    <li class="shopping"><a href="javaScript:">特惠商城</a></li>
-                    <li class="drop-down teatime"><a href="javaScript:">INLIVE</a>
-                        <ol>
-                            <li>下午茶</li>
-                        </ol>
-                    </li>
-                    <li class="drop-down company">
-                        <a href="javaScript:">企业专区</a>
-                        <ol>
-                            <li>企业vip登录</li>
-                        </ol>
-                    </li>
-                    <li class="card"><a href="javaScript:">卡卷兑换
-                        </a></li>
-                </ul>
-            </div>
-            <!-- 右 -->
-            <div class="rightsidebar">
-                <div class="minu_top">
-                    <a href="">登录</a>
-                    <a href="">丨</a>
-                    <a href="">注册</a>
-                </div>
-                <div class="minu_but">
-                    <a href="">
-                        <img src="../image/icon_basket_header.png" alt="">
-                        <span class="shopCar">0</span>
-                    </a>
-                    <a href="">上海</a>
-                </div>
+            <div class="minu_but">
+                <a href="">
+                    <img src="../image/icon_basket_header.png" alt="">
+                    <span class="shopCar">0</span>
+                </a>
+                <a class="area" href="javaScript:">
+                    <p class="region">配送地址</p>
+                    <div class="erea-wrap">
+                        <p class="sitg"></p>
+                        <p class="address">请选择您要配送的地址：</p>
+                        <select name="" id="province" class="pro">
+                            <option value="">请选择省份</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                        <select name="" id="province" class="city">
+                            <option value="">请选择城市</option>
+                            <option value="">1</option>
+                        </select>
+                        <select name="" id="province" class="county">
+                            <option value="">请选择县</option>
+                            <!-- <option value="">无</option> -->
+                        </select>
+                        <button class="pro-btn">提交</button>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+</div>
+<script>
+    // 二级联动
+    var area = document.querySelector(".area");
+    var wrap = document.querySelector(".erea-wrap");
+    var btn = document.querySelector(".pro-btn");
+    // console.log(area, wrap, btn);
+
+    area.onclick = function () {
+        wrap.style.display = "block";
+    }
+    
+    btn.onclick = function (e) {
+        var e = e || window.event;
+        wrap.style.display = "none";
+        alert("地址提交成功");
+        e.stopPropagation();
+    }
+
+    document.addEventListener('click', function(e){
+        if(area.contains(e.target)){
+            wrap.style.display = "block";
+        }else{
+            wrap.style.display = "none";
+        }
+    })
+
+    
+
+
+    var province = document.querySelector(".pro");
+    var city = document.querySelector(".city");
+    var county = document.querySelector(".county");
+    // console.log(province,city,county);
+
+    var req = new XMLHttpRequest();
+    req.open("get", "http://api.yytianqi.com/citylist/id/2", true);
+    req.send();
+    req.onreadystatechange = function () {
+
+        if (req.readyState == 4 && req.status == 200) {
+            // console.log(req.responseText);
+            var obj = JSON.parse(req.responseText);
+            var list = obj.list;
+            // console.log(list);
+
+            var html = ` <option value="">请选择省份</option>`;
+            list.forEach(({ city_id, name, list: cityList }) => {
+                // console.log(city_id, name, cityList);
+                html += `<option value="${city_id}">${name}</option>`;
+            });
+            province.innerHTML = html;
+
+
+            province.onchange = function () {
+                var city_id = this.value;
+                // console.log(city_id);
+                if (city_id) {
+                    var thisPro = list.filter(item => item.city_id == city_id)[0];
+                    // console.log(thisPro);
+                    var cityList = thisPro.list;
+                    html = ` <option value="">请选择城市</option>`;
+                    cityList.forEach(({ city_id, name, list: cityList }) => {
+                        html += ` <option value="${city_id}">${name}</option>`
+                    })
+                    city.innerHTML = html;
+
+                    city.onchange = function () {
+                        var county_id = this.value;
+                        if (county_id) {
+                            // console.log(countyList);
+                            html = ` <option value="">请选择县城</option>`;
+                            if (cityList[0].list) {
+                                var countyList = cityList[0].list;
+                                countyList.forEach(({ city_id, name }) => {
+                                    html += ` <option value="${city_id}">${name}</option>`;
+                                })
+                                county.innerHTML = html;
+                            } else {
+                                html = ` <option value="">没有数据</option>`;
+                                county.innerHTML = html;
+                            }
+                        } else {
+                        }
+                    }
+                } else {
+                }
+
+            }
+
+
+
+
+        }
+    }
+
+
+
+
+
+
+
+</script>

@@ -62,6 +62,7 @@
     font-family: Microsoft Yahei;
     font-size: 14px;
 }
+
 .mainbav .drop-down{
     position: relative;
     background: url(../image/icon_arrow_down.png) no-repeat 78px 11px;
@@ -92,6 +93,9 @@
     font-size: 12px;
     text-align: center;
     color: inherit;    
+}
+.mainbav .drop-down ol li a{
+    color: #505050;
 }
 .mainbav .drop-down ol li:hover{
     background-color: #e9546b;
@@ -181,10 +185,61 @@
     background-color: #fff;
     border-radius: 50%;
 }
-.minu_but a:nth-child(2){
+.minu_but .area{
     color: #fff;
-    width: 90px;
+    width: 105px;
     font-size: 14px;
     border-right: 1px solid #fff;
+    background: url(../image/icon_arrow_down.png) no-repeat 85px 8px;
+    position: relative;
 }
+.minu_but .area:hover .erea-wrap .sitg{
+    background-color:#e9546b;
+}
+.minu_but .area .erea-wrap{
+    display: none;
+    width: 275px;
+    height: 125px;
+    position: absolute;
+    left: -80px;
+    top:20px;
+    border: 1px solid #e9546b;
+    background-color: #fafafa;
+    z-index: 999;
+}
+.minu_but .area .erea-wrap::after{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 127px;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+}
+.minu_but .area .erea-wrap .sitg{
+    width: 100%;
+    height: 16px;
+    background-color:#e9546b;
+}
+.minu_but .area .erea-wrap .address{
+    text-align: left;
+    line-height: 30px;
+    color: #505050;
+}
+.minu_but .area .erea-wrap select{
+    width: 88px;
+    height: 35px;
+    margin-top: 10px;
+    
+}
+.minu_but .area .erea-wrap .pro-btn{
+    width: 70px;
+    height: 25px;
+    border: 0;
+    color: #f0f0f0;
+    background: #505050;
+    margin-top: 4px;
+}
+
 

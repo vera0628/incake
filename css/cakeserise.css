@@ -55,7 +55,7 @@ aside {
   min-height: 410px;
 }
 aside .cakelist {
-  margin-top: 84px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -129,6 +129,19 @@ aside .cakelist li a .favor {
 }
 aside .cakelist li a .favor:hover {
   background: url(../image/icon_favor_hover.png);
+}
+aside .pagalation {
+  width: 250px;
+  margin: 10px auto;
+}
+aside .pagalation button {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+aside .pagalation button.left {
+  margin-right: 40px;
 }
 
 /*# sourceMappingURL=cakeserise.css.map */

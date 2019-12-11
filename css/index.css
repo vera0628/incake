@@ -1,30 +1,37 @@
 /* 头部 */
-header .index a{
+header #header .index a{
     border-color: #fff;
 }
 /* 广告 */
 article {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 .swiper {
     width: 1200px;
     margin: 0 auto;
     position: relative;
+    height: 680px;
 }
-article .slide_wrap {
-    width: calc(1200px * 4);
+.swiper .slide_wrap {
+    width: calc(100vw * 5);
+
     font-size: 0;
     white-space: nowrap;
+    /* position: absolute;
+    left: 0; */
+    transform: translateX(calc((1200px - 100vw) / 2));
 }
 .slide_wrap .slide {
-    width: 1200px;
-    height: 680px;
     position: relative;
-}
-.slide_wrap .slide {
+    width: 100vw;
+    height: 680px;
     display: inline-block;
-    vertical-align: middle;
+    font-size: 0;
+    overflow: hidden;
 }
+
 .slide img {
     position: absolute;
     left: 50%;
@@ -49,7 +56,7 @@ article .slide_wrap {
     background-position: 0 -86px;
 }
 .right_arrow {
-    right: 53px;
+    right: -37px;
     background-position: -53px 0;
 }
 .right_arrow:hover {
@@ -71,6 +78,9 @@ article .slide_wrap {
     border-radius: 3px;
     background-color: #45515e;
     cursor: pointer;
+}
+.pagination .active{
+    background-color: #e9546b;
 }
 
 @keyframes swiper {

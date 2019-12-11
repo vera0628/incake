@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/pc_common.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/shoppingcart.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header></header>
+    <!-- 内容 -->
+    <article>
+        <!-- title -->
+        <div class="title">
+            <h2>SHOPPING BASKET</h2>
+            <p>
+                <span>购物篮</span>
+            </p>
+        </div>
+        <!-- 提交状态 -->
+        <div class="process">
+            <ul class="pro-step">
+                <li class="step active line">
+                    <span></span>
+                    <p>我的购物篮</p>
+                </li>
+                <li class="step line">
+                    <span></span>
+                    <p>填写和提交订单</p>
+                </li>
+                <li class="step">
+                    <span></span>
+                    <p>成功提交订单</p>
+                </li>
+            </ul>
+            <div class="pro-msg">
+            </div>
+        </div>
+        <!-- 购物车 -->
+        <div class="list-wrap">
+            <div class="list-header">
+                <span class="h-checkAll btn-checkAll"></span>
+                <a>全选</a>
+                <span class="h-produce">商品</span>
+                <span class="h-attr">属性</span>
+                <span class="h-number">数量</span>
+                <span class="h-spec">规格</span>
+                <span class="h-price">单价</span>
+                <span class="h-privilege">优惠</span>
+                <span class="h-operate">操作</span>
+            </div>
+            <ul class="list-content">
+                <li>
+                    <div class="check-one"></div>
+                    <div class="produce-img"></div>
+                    <div class="produce">
+                        <p class="ch">维也纳骑士</p>
+                        <p class="en">Vienna Knight</p>
+                    </div>
+                    <div class="attr">免费赠送5份餐具</div>
+                    <div class="number-wrap">
+                        <div class="number">
+                            <span class="reduce"></span>
+                            <div class="num-value">1</div>
+                            <span class="add"></span>
+                        </div>
+                    </div>
+                    <div class="spec">510g</div>
+                    <div class="price ">¥198</div>
+                    <div class="privilege"></div>
+                    <div class="operate">
+                        <span class="delete">删除</span>
+                    </div>
+                </li>
+                <li>
+                        <div class="check-one"></div>
+                        <div class="produce-img"></div>
+                        <div class="produce">
+                            <p class="ch">维也纳骑士</p>
+                            <p class="en">Vienna Knight</p>
+                        </div>
+                        <div class="attr">免费赠送5份餐具</div>
+                        <div class="number-wrap">
+                            <div class="number">
+                                <span class="reduce"></span>
+                               <div class="num-value">1</div>
+                                <span class="add"></span>
+                            </div>
+                        </div>
+                        <div class="spec">510g</div>
+                        <div class="price ">¥198</div>
+                        <div class="privilege"></div>
+                        <div class="operate">
+                            <span class="delete">删除</span>
+                        </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </article>
+    <!-- 附带商品区 -->
+    <aside>
+
+    </aside>
+    <!-- 尾部 -->
+    <footer></footer>
+
+</body>
+<script src="../js/jquery-1.10.1.min.js"></script>
+
+
+<script>
+        $(function(){
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+        })
+</script>
+
+
+
+<script src="../js/shoopingcart.js"></script>
+
+</html>

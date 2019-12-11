@@ -1,0 +1,107 @@
+.login-page{
+    width: 100%;
+    height: 760px;
+    .page{
+        width: 1200px;
+        padding: 80px 0 0 98px;
+        margin: 0 auto;
+        overflow: hidden;
+        .page-left{
+            float: left;
+            border-right: 1px solid #d6dce2;
+            .side{
+                width: 572px;
+                height: 348px;
+                background: url(../image/login-slogan.png) no-repeat;
+                margin: 86px 0 68px 48px;
+            }
+        }
+        .page-right{
+            float: left;
+            width: 579px;
+            height: 520px;
+            position: relative;
+            .service{
+                width: 392px;
+                padding: 65px 0 0 98px;
+                
+                h6{
+                    font-size: 40px;
+                    line-height: 32px;
+                    color: #d6dce2;
+                    text-align: center;
+                    margin-bottom: 18px;
+                    font-weight: 500;
+                }
+                input{
+                    width: 390px;
+                    height: 50px;
+                    background-color: #fafafa;
+                    border: 1px solid #929eab;
+                    border-radius: 4px;
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                    line-height: 50px;
+                    text-indent: 1em;;
+                }
+                .msg{
+                    float: right;
+                    margin-right: 10px;
+                    text-align: right;
+                    color: #1478be;
+                    margin-bottom: 13px;
+                    &:hover{
+                        text-decoration:underline;
+                    }
+                }
+                .login-btn{
+                    width: 390px;
+                    height: 50px;
+                    background-color: #fff;
+                    border: 1px solid #45515e;
+                    border-radius: 4px;
+                    margin-bottom: 34px;
+                    font-size: 20px;
+                    line-height: 52px;
+                    color: #fff;
+                    background-color: #45515f;
+                    text-align: center;
+                    cursor:pointer;
+                }
+                .title{
+                    float: left;
+                    height: 30px;
+                    margin-left: 10px;
+                    font-size: 14px;
+                    line-height: 30px;
+                    
+                }
+                .join{
+                    float: left;
+                    height: 30px;
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #1478be;
+                    &:hover{
+                        text-decoration:underline;
+                    }
+                }
+            }
+            .icon-hot{
+                width: 186px;
+                height: 76px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                .hot-left{
+                    float: left;
+                }
+                .hot-right{
+                    float:right;
+
+                }
+            }
+        }
+        
+    }
+}

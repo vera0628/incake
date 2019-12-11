@@ -9,7 +9,7 @@ input,select,button,textarea{outline:none;}
 textarea{resize:none;}
 input[type="button"],input[type="submit"],input[type="file"] {cursor:pointer;}
 input::-webkit-input-placeholder{
-  color: red;
+  color:  grey;
   font-size: 16px;
 }
 input:-moz-placeholder{
